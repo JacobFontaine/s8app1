@@ -1,0 +1,28 @@
+C:\Users\Jacob\Documents\s8 app1\app\RestApi\bin\Debug\netcoreapp2.1\RestApi.deps.json
+C:\Users\Jacob\Documents\s8 app1\app\RestApi\bin\Debug\netcoreapp2.1\RestApi.runtimeconfig.json
+C:\Users\Jacob\Documents\s8 app1\app\RestApi\bin\Debug\netcoreapp2.1\RestApi.runtimeconfig.dev.json
+C:\Users\Jacob\Documents\s8 app1\app\RestApi\bin\Debug\netcoreapp2.1\RestApi.dll
+C:\Users\Jacob\Documents\s8 app1\app\RestApi\bin\Debug\netcoreapp2.1\RestApi.pdb
+C:\Users\Jacob\Documents\s8 app1\app\RestApi\obj\Debug\netcoreapp2.1\RestApi.csprojAssemblyReference.cache
+C:\Users\Jacob\Documents\s8 app1\app\RestApi\obj\Debug\netcoreapp2.1\RestApi.csproj.CoreCompileInputs.cache
+C:\Users\Jacob\Documents\s8 app1\app\RestApi\obj\Debug\netcoreapp2.1\RestApi.RazorAssemblyInfo.cache
+C:\Users\Jacob\Documents\s8 app1\app\RestApi\obj\Debug\netcoreapp2.1\RestApi.RazorAssemblyInfo.cs
+C:\Users\Jacob\Documents\s8 app1\app\RestApi\obj\Debug\netcoreapp2.1\RestApi.AssemblyInfoInputs.cache
+C:\Users\Jacob\Documents\s8 app1\app\RestApi\obj\Debug\netcoreapp2.1\RestApi.AssemblyInfo.cs
+C:\Users\Jacob\Documents\s8 app1\app\RestApi\obj\Debug\netcoreapp2.1\RestApi.RazorTargetAssemblyInfo.cache
+C:\Users\Jacob\Documents\s8 app1\app\RestApi\obj\Debug\netcoreapp2.1\RestApi.dll
+C:\Users\Jacob\Documents\s8 app1\app\RestApi\obj\Debug\netcoreapp2.1\RestApi.pdb
+C:\Users\jacob\Documents\s8app1\app\RestApi\bin\Debug\netcoreapp2.1\RestApi.deps.json
+C:\Users\jacob\Documents\s8app1\app\RestApi\bin\Debug\netcoreapp2.1\RestApi.runtimeconfig.json
+C:\Users\jacob\Documents\s8app1\app\RestApi\bin\Debug\netcoreapp2.1\RestApi.runtimeconfig.dev.json
+C:\Users\jacob\Documents\s8app1\app\RestApi\bin\Debug\netcoreapp2.1\RestApi.dll
+C:\Users\jacob\Documents\s8app1\app\RestApi\bin\Debug\netcoreapp2.1\RestApi.pdb
+C:\Users\jacob\Documents\s8app1\app\RestApi\obj\Debug\netcoreapp2.1\RestApi.csprojAssemblyReference.cache
+C:\Users\jacob\Documents\s8app1\app\RestApi\obj\Debug\netcoreapp2.1\RestApi.csproj.CoreCompileInputs.cache
+C:\Users\jacob\Documents\s8app1\app\RestApi\obj\Debug\netcoreapp2.1\RestApi.RazorAssemblyInfo.cache
+C:\Users\jacob\Documents\s8app1\app\RestApi\obj\Debug\netcoreapp2.1\RestApi.RazorAssemblyInfo.cs
+C:\Users\jacob\Documents\s8app1\app\RestApi\obj\Debug\netcoreapp2.1\RestApi.AssemblyInfoInputs.cache
+C:\Users\jacob\Documents\s8app1\app\RestApi\obj\Debug\netcoreapp2.1\RestApi.AssemblyInfo.cs
+C:\Users\jacob\Documents\s8app1\app\RestApi\obj\Debug\netcoreapp2.1\RestApi.RazorTargetAssemblyInfo.cache
+C:\Users\jacob\Documents\s8app1\app\RestApi\obj\Debug\netcoreapp2.1\RestApi.dll
+C:\Users\jacob\Documents\s8app1\app\RestApi\obj\Debug\netcoreapp2.1\RestApi.pdb

@@ -1,0 +1,17 @@
+C:\Users\jacob\Documents\s8app1\app\RestApiTest\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\jacob\Documents\s8app1\app\RestApiTest\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\jacob\Documents\s8app1\app\RestApiTest\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\jacob\Documents\s8app1\app\RestApiTest\bin\Debug\netcoreapp2.1\RestApiTest.deps.json
+C:\Users\jacob\Documents\s8app1\app\RestApiTest\bin\Debug\netcoreapp2.1\RestApiTest.runtimeconfig.json
+C:\Users\jacob\Documents\s8app1\app\RestApiTest\bin\Debug\netcoreapp2.1\RestApiTest.runtimeconfig.dev.json
+C:\Users\jacob\Documents\s8app1\app\RestApiTest\bin\Debug\netcoreapp2.1\RestApiTest.dll
+C:\Users\jacob\Documents\s8app1\app\RestApiTest\bin\Debug\netcoreapp2.1\RestApiTest.pdb
+C:\Users\jacob\Documents\s8app1\app\RestApiTest\bin\Debug\netcoreapp2.1\RestApi.dll
+C:\Users\jacob\Documents\s8app1\app\RestApiTest\bin\Debug\netcoreapp2.1\RestApi.pdb
+C:\Users\jacob\Documents\s8app1\app\RestApiTest\obj\Debug\netcoreapp2.1\RestApiTest.csprojAssemblyReference.cache
+C:\Users\jacob\Documents\s8app1\app\RestApiTest\obj\Debug\netcoreapp2.1\RestApiTest.csproj.CoreCompileInputs.cache
+C:\Users\jacob\Documents\s8app1\app\RestApiTest\obj\Debug\netcoreapp2.1\RestApiTest.AssemblyInfoInputs.cache
+C:\Users\jacob\Documents\s8app1\app\RestApiTest\obj\Debug\netcoreapp2.1\RestApiTest.AssemblyInfo.cs
+C:\Users\jacob\Documents\s8app1\app\RestApiTest\obj\Debug\netcoreapp2.1\RestApiTest.csproj.CopyComplete
+C:\Users\jacob\Documents\s8app1\app\RestApiTest\obj\Debug\netcoreapp2.1\RestApiTest.dll
+C:\Users\jacob\Documents\s8app1\app\RestApiTest\obj\Debug\netcoreapp2.1\RestApiTest.pdb
