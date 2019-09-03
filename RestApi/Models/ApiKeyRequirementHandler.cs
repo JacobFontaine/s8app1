@@ -21,7 +21,7 @@ namespace RestApi.Models
         {
             if (context.Resource is AuthorizationFilterContext authorizationFilterContext)
             {
-                var apiKey = authorizationFilterContext.HttpContext.Request.Headers[API_KEY_HEADER_NAME].FirstOrDefault();
+                var apiKey = authorizationFilterContext.HttpContext.Request.Headers[API_KEY_HEADER_NAME].SingleOrDefault();
                 if (apiKey != null && requirement.ApiKeys.Any(requiredApiKey => apiKey == requiredApiKey))
                 {
                     context.Succeed(requirement);

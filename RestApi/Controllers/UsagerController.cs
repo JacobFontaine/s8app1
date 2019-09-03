@@ -4,6 +4,8 @@ using RestApi.Models;
 using System.Net;
 using System.Net.Http;
 using Microsoft.AspNetCore.Authorization;
+using System;
+using System.Text;
 
 namespace RestApi.Controllers
 {
@@ -40,18 +42,33 @@ namespace RestApi.Controllers
 
         [Authorize(Policy = "ApiKeyPolicy")]
         [HttpPost]
-        public IActionResult LoginUsager(Usager user)
+        public IActionResult Authenticate(string action)
         {
+            string values = headerValue();
+            string[] credentials = values.ToString().Split(':');
+            string username = Base64Decode(credentials[0]);
+            string password = Base64Decode(credentials[1]);
+
             IEnumerable<Usager> userList = usagers.GetAll();
             foreach (Usager usage in userList)
             {
-                if(usage.UserName == user.UserName && usage.Mdp == user.Mdp)
+                if (usage.UserName == username && usage.Mdp == password)
                 {
                     return new OkObjectResult(usage);
                 }
             }
+            return new BadRequestResult();
+        }
+        public static string Base64Decode(string base64EncodedData)
+        {
+            var base64EncodedBytes = System.Convert.FromBase64String(base64EncodedData);
+            return System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
+        }
 
-            return new BadRequestResult();          
+        public virtual string headerValue()
+        {
+            _ = Request.Headers.TryGetValue("Login", out Microsoft.Extensions.Primitives.StringValues values);
+            return values;
         }
     }
 }

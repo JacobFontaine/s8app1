@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace RestApi.Models
 {
-    interface IUsager
+    public interface IUsager
     {
         IEnumerable<Usager> GetAll();
         Usager Get(int id);

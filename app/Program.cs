@@ -42,6 +42,12 @@ namespace app
             return value;
         }
 
+        public static string Base64Encode(string plainText)
+        {
+            var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
+            return System.Convert.ToBase64String(plainTextBytes);
+        }
+
         static Usager ConnexionUsager(HttpClient client, string usagerUrl)
         {
             Console.WriteLine("Entrez votre usager:");
@@ -52,9 +58,15 @@ namespace app
 
             string mdp = Console.ReadLine();
 
+            string login = Base64Encode(username)+":"+ Base64Encode(mdp);
+
+            client.DefaultRequestHeaders.Add("Login", login);
+
             Usager user = new Usager { UserName = username, Mdp = mdp };
 
-            HttpResponseMessage response = client.PostAsJsonAsync(new Uri(usagerUrl), user).Result;
+            string action = "login";
+
+            HttpResponseMessage response = client.PostAsJsonAsync(new Uri(usagerUrl), action).Result;
 
             if (response.IsSuccessStatusCode)
             {
@@ -76,8 +88,10 @@ namespace app
 
                     user.UserName = username;
                     user.Mdp = mdp;
-
-                    response = client.PostAsJsonAsync(new Uri(usagerUrl), user).Result;
+                    login = Base64Encode(username) + ":" + Base64Encode(mdp);
+                    client.DefaultRequestHeaders.Remove("Login");
+                    client.DefaultRequestHeaders.Add("Login", login);
+                    response = client.PostAsJsonAsync(new Uri(usagerUrl), action).Result;
                 }
                 Console.WriteLine("Connexion réussie");
             }
@@ -97,7 +111,6 @@ namespace app
             string sondageUrl = "https://localhost:44301/api/sondage";
             string reponseUrl = "https://localhost:44301/api/reponse";
             string usagerUrl = "https://localhost:44301/api/usager";
-
 
             Usager user = ConnexionUsager(client, usagerUrl);
 
@@ -180,6 +193,5 @@ namespace app
 
             Console.WriteLine("\nMerci d'avoir repondu au sondage/n");
         }
-
     }
 }

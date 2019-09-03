@@ -5,12 +5,28 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Net;
 using Microsoft.AspNetCore.Mvc;
+using Moq;
+using System;
 
 namespace RestApiTest
 {
     [TestClass]
     public class UsagerUnitTest
     {
+        public static string Base64Encode(string plainText)
+        {
+            var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
+            return System.Convert.ToBase64String(plainTextBytes);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void AddUserNull()
+        {
+            IUsager user = new UsagerRest();
+            user.Add(null);
+        }
+
         [TestMethod]
         public void GetAllUsagerSucess()
         {
@@ -126,39 +142,43 @@ namespace RestApiTest
         [TestMethod]
         public void LoginUsagerSucess()
         {
-            var controller = new UsagerController();
             int[] completeSondageInit = { 0, 0 };
-            Usager user = new Usager {UserName = "Jacob", Mdp = "mdp1"};
             Usager expectedUser = new Usager { Id = 0, UserName = "Jacob", Mdp = "mdp1", CompleteSondageId = completeSondageInit };
 
+            string login = Base64Encode("Jacob") + ":" + Base64Encode("mdp1");
+
+            Mock<UsagerController> chk = new Mock<UsagerController>();
+            chk.Setup(x => x.headerValue()).Returns(login);
+
             OkObjectResult expectedReponse = new OkObjectResult(expectedUser);
-            OkObjectResult reponse = controller.LoginUsager(user) as OkObjectResult;
+            OkObjectResult reponse = chk.Object.Authenticate("login") as OkObjectResult;
             Assert.AreEqual(expectedReponse.StatusCode, reponse.StatusCode);
         }
 
         [TestMethod]
         public void LoginUsagerFailureBadUsername()
         {
-            var controller = new UsagerController();
-            int[] completeSondageInit = { 0, 0 };
-            Usager user = new Usager { UserName = "test", Mdp = "mdp1" };
+            string login = Base64Encode("Macob") + ":" + Base64Encode("mdp1");
+
+            Mock<UsagerController> chk = new Mock<UsagerController>();
+            chk.Setup(x => x.headerValue()).Returns(login);
 
             BadRequestResult expectedReponse = new BadRequestResult();
-            BadRequestResult reponse = controller.LoginUsager(user) as BadRequestResult;
+            BadRequestResult reponse = chk.Object.Authenticate("login") as BadRequestResult;
             Assert.AreEqual(expectedReponse.StatusCode, reponse.StatusCode);
         }
 
         [TestMethod]
         public void LoginUsagerFailureBadPassword()
         {
-            var controller = new UsagerController();
-            int[] completeSondageInit = { 0, 0 };
-            Usager user = new Usager { UserName = "Jacob", Mdp = "mdp2" };
+            string login = Base64Encode("Jacob") + ":" + Base64Encode("mdp2");
+
+            Mock<UsagerController> chk = new Mock<UsagerController>();
+            chk.Setup(x => x.headerValue()).Returns(login);
 
             BadRequestResult expectedReponse = new BadRequestResult();
-            BadRequestResult reponse = controller.LoginUsager(user) as BadRequestResult;
+            BadRequestResult reponse = chk.Object.Authenticate("login") as BadRequestResult;
             Assert.AreEqual(expectedReponse.StatusCode, reponse.StatusCode);
         }
-
     }
 }
